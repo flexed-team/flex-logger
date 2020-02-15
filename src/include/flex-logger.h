@@ -7,23 +7,25 @@
 #define C_RED     FOREGROUND_RED
 #define C_GREEN   FOREGROUND_GREEN
 #define C_YELLOW  FOREGROUND_RED | FOREGROUND_GREEN
-#define C_DEFAULT FOREGROUND_BLUE|FOREGROUND_GREEN|FOREGROUND_RED
+#define C_DEFAULT FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED
 
-class Logger
+namespace flexLogger
 {
+	class Logger
+	{
 	public:
-		Logger(const char* n) 
-			: name(n) 
+		Logger(const char* n)
+			: name(n)
 		{};
-		
+
 		~Logger() {};
-		
+
 		void log(const char*);
 		void log_err(const char*);
 		void log_warr(const char*);
-		
+
 	protected:
 		const char* name;
+	};
 };
-
 #endif
