@@ -12,18 +12,18 @@
 class Logger
 {
 	public:
-		Logger(std::string n) 
+		Logger(const char* n) 
 			: name(n) 
 		{};
 		
 		~Logger() {};
 		
-		void log(std::string);
-		void log_err(std::string);
-		void log_warr(std::string);
+		void log(const char*);
+		void log_err(const char*);
+		void log_warr(const char*);
 		
 	protected:
-		std::string name;
+		const char* name;
 };
 
 #endif
